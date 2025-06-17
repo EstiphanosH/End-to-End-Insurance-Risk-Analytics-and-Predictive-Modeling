@@ -5,7 +5,7 @@ import tempfile
 import pandas as pd
 import numpy as np
 from unittest.mock import patch, MagicMock
-from eda_analyzer import EDAAnalyzer
+from scripts.eda_analyzer import EDAAnalyzer
 
 class TestEDAAnalyzer(unittest.TestCase):
     def setUp(self):
@@ -50,7 +50,7 @@ class TestEDAAnalyzer(unittest.TestCase):
         self.assertEqual(missing.loc['missing_data', 'missing_count'], 5)
         self.assertEqual(missing.loc['categorical', 'missing_count'], 0)
     
-    @patch('eda_analyzer.IsolationForest')
+    @patch('scripts.eda_analyzer.IsolationForest')
     def test_detect_outliers(self, mock_forest):
         # Mock IsolationForest to return 2 outliers
         mock_clf = MagicMock()
