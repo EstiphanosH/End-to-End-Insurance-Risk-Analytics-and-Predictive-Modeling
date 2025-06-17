@@ -1,0 +1,3 @@
+# Project parameters
+data_path: data/raw/
+model_path: models/
