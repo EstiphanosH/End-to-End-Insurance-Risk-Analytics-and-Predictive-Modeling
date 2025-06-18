@@ -5,7 +5,7 @@ import tempfile
 import pandas as pd
 import numpy as np
 from unittest.mock import patch, MagicMock
-from eda_analyzer import EDAAnalyzer
+from scripts.eda_analyzer import EDAAnalyzer
 
 class TestEDAAnalyzer(unittest.TestCase):
     def setUp(self):
